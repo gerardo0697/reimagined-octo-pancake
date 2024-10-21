@@ -191,16 +191,10 @@ h3 {
     }
 }
 
-
-/* Mostrar solo la vista previa en dispositivos móviles */
+/* Asegúrate de que el iframe esté oculto en pantallas más pequeñas */
 @media (max-width: 767px) {
-    .pdf-frame {
-        display: none;
-    }
-    .pdf-preview {
-        display: block;
-        width: 100%;
-        height: auto;
+    .pdf-frame-computer {
+        display: none; /* Asegúrate de que el iframe no se muestre en teléfonos */
     }
 }
 
