@@ -2,7 +2,7 @@
 const openPdfButtons = document.querySelectorAll('.open-pdf');
 const pdfModal = document.querySelector('.pdf-modal');
 const pdfOverlay = document.querySelector('.pdf-overlay');
-const pdfFrame = document.querySelector('.pdf-frame'); // Cambiado a .pdf-frame para que coincida con el CSS
+const pdfFrame = document.querySelector('.pdf-frame-modal'); // iframe para el modal
 const closePdfButton = document.querySelector('.close-pdf');
 const downloadPdfLink = document.querySelector('.download-pdf');
 
@@ -45,14 +45,13 @@ function closeModal() {
     pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
 }
 
-  // Selecciona todas las imágenes de vista previa
-  document.querySelectorAll('.pdf-preview').forEach(function(preview) {
+// Selecciona todas las imágenes de vista previa
+document.querySelectorAll('.pdf-preview').forEach(function(preview) {
     preview.addEventListener('click', function() {
-      // Obtiene el PDF asociado a la imagen (usando el mismo nombre de archivo)
-      const pdfUrl = this.nextElementSibling.src;
-      
-      // Abre el PDF en una nueva pestaña
-      window.open(pdfUrl, '_blank');
+        // Obtiene el PDF asociado a la imagen (usando el mismo nombre de archivo)
+        const pdfUrl = this.closest('.pdf-card').getAttribute('data-pdf');
+        
+        // Abre el PDF en una nueva pestaña
+        window.open(pdfUrl, '_blank');
     });
-  });
-
+});
