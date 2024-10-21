@@ -1,9 +1,8 @@
-
 // Funcionalidad para abrir PDFs
 const openPdfButtons = document.querySelectorAll('.open-pdf');
 const pdfModal = document.querySelector('.pdf-modal');
 const pdfOverlay = document.querySelector('.pdf-overlay');
-const pdfFrame = document.querySelector('.pdf-frame');
+const pdfFrame = document.querySelector('.pdf-frame-modal'); // Cambiado a .pdf-frame-modal
 const closePdfButton = document.querySelector('.close-pdf');
 const downloadPdfLink = document.querySelector('.download-pdf');
 
@@ -31,15 +30,30 @@ openPdfButtons.forEach(button => {
 
 // Cerrar el modal
 closePdfButton.addEventListener('click', function () {
-    pdfModal.style.display = 'none';
-    pdfOverlay.style.display = 'none';
-    pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
+    closeModal(); // Mueve la lógica a una función para reutilizar
 });
 
 // Cerrar el modal al hacer clic en el overlay
 pdfOverlay.addEventListener('click', function () {
+    closeModal(); // Mueve la lógica a una función para reutilizar
+});
+
+// Función para cerrar el modal
+function closeModal() {
     pdfModal.style.display = 'none';
     pdfOverlay.style.display = 'none';
     pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
+}
+
+// Selecciona todas las imágenes de vista previa
+document.querySelectorAll('.pdf-preview').forEach(function(preview) {
+    preview.addEventListener('click', function() {
+        // Obtiene el PDF asociado a la imagen (usando el mismo nombre de archivo)
+        const pdfUrl = this.closest('.pdf-card').getAttribute('data-pdf');
+        
+        // Abre el PDF en una nueva pestaña
+        window.open(pdfUrl, '_blank');
+    });
 });
+
 
