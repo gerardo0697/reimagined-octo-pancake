@@ -1,45 +1,37 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const pdfCards = document.querySelectorAll('.pdf-card');
+    const pdfOverlay = document.querySelector('.pdf-overlay');
+    const pdfModal = document.querySelector('.pdf-modal');
+    const pdfFrame = document.querySelector('.pdf-frame-modal');
+    const closePdfBtn = document.querySelector('.close-pdf');
+    const downloadPdfBtn = document.querySelector('.download-pdf');
 
-// Funcionalidad para abrir PDFs
-const openPdfButtons = document.querySelectorAll('.open-pdf');
-const pdfModal = document.querySelector('.pdf-modal');
-const pdfOverlay = document.querySelector('.pdf-overlay');
-const pdfFrame = document.querySelector('.pdf-frame');
-const closePdfButton = document.querySelector('.close-pdf');
-const downloadPdfLink = document.querySelector('.download-pdf');
+    // Abrir PDF en modal al hacer clic en el botón
+    pdfCards.forEach(card => {
+        card.querySelector('.open-pdf').addEventListener('click', function() {
+            const pdfUrl = card.getAttribute('data-pdf'); // Obtiene el URL del PDF
 
-// Agrega un event listener a cada botón de abrir PDF
-openPdfButtons.forEach(button => {
-    button.addEventListener('click', function (event) {
-        event.preventDefault(); // Evitar comportamiento por defecto
-
-        // Obtiene la URL del PDF desde el atributo data-pdf
-        const pdfUrl = this.closest('.pdf-card').getAttribute('data-pdf');
-
-        // Comprobar si el ancho de la pantalla es menor o igual a 768px
-        if (window.innerWidth <= 768) {
-            // Abrir en una nueva pestaña
-            window.open(pdfUrl, '_blank');
-        } else {
-            // Abrir en el modal
+            // Configurar el iframe del modal y el enlace de descarga
             pdfFrame.src = pdfUrl;
-            downloadPdfLink.href = pdfUrl; // Asegúrate de que el enlace de descarga tenga la URL correcta
-            pdfModal.style.display = 'flex';
+            downloadPdfBtn.href = pdfUrl;
+
+            // Mostrar el modal
             pdfOverlay.style.display = 'block';
-        }
+            pdfModal.style.display = 'block';
+        });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cerrar
+    closePdfBtn.addEventListener('click', function() {
+        pdfOverlay.style.display = 'none';
+        pdfModal.style.display = 'none';
+        pdfFrame.src = '';  // Limpiar el iframe cuando se cierra el modal
+    });
+
+    // También cerrar el modal al hacer clic en el overlay (fondo oscuro)
+    pdfOverlay.addEventListener('click', function() {
+        pdfOverlay.style.display = 'none';
+        pdfModal.style.display = 'none';
+        pdfFrame.src = '';  // Limpiar el iframe
     });
 });
-
-// Cerrar el modal
-closePdfButton.addEventListener('click', function () {
-    pdfModal.style.display = 'none';
-    pdfOverlay.style.display = 'none';
-    pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
-});
-
-// Cerrar el modal al hacer clic en el overlay
-pdfOverlay.addEventListener('click', function () {
-    pdfModal.style.display = 'none';
-    pdfOverlay.style.display = 'none';
-    pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
-});
-
