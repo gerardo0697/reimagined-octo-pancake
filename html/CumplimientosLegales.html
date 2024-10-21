@@ -68,18 +68,27 @@
       <div class="pdf-card-container">
 
         <!-- 1 -->
-      <div class="pdf-card" data-pdf="../pdf/3 y 4 - Escritura de Internacional - Nueva credencial.pdf">
-  <h3>NIT y Tarjeta de Registro de IVA</h3>
+<div class="pdf-card" data-pdf="../pdf/3 y 4 - Escritura de Internacional - Nueva credencial.pdf">
+    <h3>NIT y Tarjeta de Registro de IVA</h3>
 
-  <!-- Imagen de vista previa para móviles y tablets -->
-  <img src="../img/vista-previa-nit.png" alt="Vista previa del PDF" class="pdf-preview">
+    <!-- Imagen de vista previa para móviles y tablets -->
+    <img src="../img/vista-previa-nit.png" alt="Vista previa del PDF" class="pdf-preview">
 
-  <!-- Iframe solo visible en computadoras -->
-  <iframe src="../pdf/1 y 2 - NIT y Tarjeta de Registro de IVA.pdf"></iframe>
-  
-  <!-- Botón para abrir el PDF en modal -->
-  <button class="open-pdf">Abrir PDF</button>
+    <!-- Iframe solo visible en computadoras -->
+    <iframe src="../pdf/1 y 2 - NIT y Tarjeta de Registro de IVA.pdf" class="pdf-frame-computer" frameborder="0"></iframe>
+    
+    <!-- Botón para abrir el PDF en modal -->
+    <button class="open-pdf">Abrir PDF</button>
 </div>
+
+<!-- Modal para visualizar el PDF en grande -->
+<div class="pdf-overlay"></div>
+<div class="pdf-modal">
+    <iframe src="" frameborder="0" class="pdf-frame-modal"></iframe>
+    <button class="close-pdf">Cerrar</button>
+    <a href="#" download class="download-pdf">Descargar PDF</a>
+</div>
+
 
 
         <!-- 2 -->
