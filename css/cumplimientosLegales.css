@@ -178,14 +178,25 @@ h3 {
     height: 300px; /* Muestra el iframe en pantallas grandes */
 }
 
-/* Para pantallas más pequeñas (teléfonos y tablets) */
-@media (max-width: 768px) {
-    .pdf-frame {
-        display: none;  /* Oculta el iframe en móviles y tablets */
-    }
-
+/* Ocultar la vista previa en pantallas grandes */
+@media (min-width: 768px) {
     .pdf-preview {
-        display: block;  /* Muestra la imagen de vista previa en móviles y tablets */
+        display: none;
+    }
+    .pdf-frame {
+        display: block;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Mostrar solo la vista previa en dispositivos móviles */
+@media (max-width: 767px) {
+    .pdf-frame {
+        display: none;
+    }
+    .pdf-preview {
+        display: block;
         width: 100%;
         height: auto;
     }
