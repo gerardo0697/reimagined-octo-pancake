@@ -42,3 +42,14 @@ pdfOverlay.addEventListener('click', function () {
     pdfOverlay.style.display = 'none';
     pdfFrame.src = ''; // Limpia la fuente del iframe al cerrar
 });
+
+  // Selecciona todas las imágenes de vista previa
+  document.querySelectorAll('.pdf-preview').forEach(function(preview) {
+    preview.addEventListener('click', function() {
+      // Obtiene el PDF asociado a la imagen (usando el mismo nombre de archivo)
+      const pdfUrl = this.nextElementSibling.src;
+      
+      // Abre el PDF en una nueva pestaña
+      window.open(pdfUrl, '_blank');
+    });
+  });
