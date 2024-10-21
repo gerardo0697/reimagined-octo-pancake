@@ -44,7 +44,6 @@
 }
 
 /* Estilos de las cards (tarjetas) */
-/* Estilos de las cards (tarjetas) */
 .pdf-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -167,10 +166,11 @@ h3 {
     color: white;
 }
 
+/* Estilos para iframe y vista previa del PDF */
 
-/* Por defecto, muestra el iframe y oculta la imagen de vista previa */
+/* Por defecto, oculta la imagen de vista previa y muestra el iframe en pantallas grandes */
 .pdf-preview {
-    display: none; /* Oculta la imagen en pantallas grandes */
+    display: none;
 }
 
 .pdf-frame {
@@ -201,3 +201,4 @@ h3 {
         height: auto;
     }
 }
+
