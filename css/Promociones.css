@@ -234,7 +234,7 @@
     display: grid;
     gap: 20px;
     justify-content: center;
-    padding: 100px;
+    padding: 20px;
     grid-template-columns: repeat(1, 1fr); /* 1 columna por defecto */
 }
 
@@ -245,5 +245,5 @@
 }
 
 .custom-contenedor {
-    padding: 100px;     
+    padding-top: 100px;     
 }
