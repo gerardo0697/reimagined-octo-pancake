@@ -50,7 +50,8 @@ function toggleContent(card) {
         });
 
         // Ajustar el ancho de la tarjeta expandida
-        card.style.maxWidth = 'calc(100% - 40px)'; // Ajusta el valor según sea necesario
+        card.style.width = '100%'; // Usar el ancho completo del contenedor
+        card.style.maxWidth = '1200px'; // Ajusta este valor según sea necesario
     }
 }
 
