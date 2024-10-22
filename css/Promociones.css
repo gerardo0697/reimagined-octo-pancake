@@ -207,23 +207,29 @@
 
 /* Estilo para el carrusel */
 /* Aquí ajustamos el tamaño del carrusel */
+/* Ajustar el tamaño del carrusel */
 .carousel {
-    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
-    max-width: 800px; /* Ajusta el ancho máximo del carrusel */
-    height: 400px; /* Ajusta la altura del carrusel (IMPORTANTE: la altura fija evita que cambie con las imágenes) */
-    margin: auto; /* Centra el carrusel */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Evita que las imágenes se salgan del carrusel */
+    width: 100%; /* Mantiene el carrusel al 100% del contenedor */
+    max-width: 800px; /* Ajusta este valor para el ancho máximo del carrusel */
+    height: 400px; /* Establece una altura fija para el carrusel */
+    margin: auto; /* Centra el carrusel en el contenedor */
+    border-radius: 10px; /* Bordes redondeados del carrusel */
+    overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
 }
 
 /* Imagen dentro del carrusel */
 .carousel-inner img {
-    width: 100%; /* Ocupa todo el ancho del carrusel */
-    height: 100%; /* Ajusta la altura de las imágenes para que coincidan con la altura del carrusel */
-    object-fit: contain; /* Mantiene las proporciones de la imagen y ajusta la imagen sin recortarla */
+    max-width: 100%; /* Asegura que la imagen no se salga del ancho del carrusel */
+    max-height: 100%; /* Asegura que la imagen no exceda la altura del carrusel */
+    width: auto; /* Permite que las imágenes pequeñas mantengan su proporción original */
+    height: auto; /* Permite que las imágenes pequeñas mantengan su proporción original */
+    object-fit: contain; /* Asegura que las imágenes pequeñas no se estiren ni se recorten */
+    display: block; /* Evita el comportamiento inline de las imágenes */
+    margin: 0 auto; /* Centra la imagen en el carrusel */
     border-radius: 10px; /* Aplica el borde redondeado también a las imágenes */
-    background-color: #000; /* Añade un fondo negro para el área vacía si la imagen no ocupa todo el espacio */
+    background-color: #000; /* Fondo negro si la imagen no llena el espacio */
 }
+
 
 
 /* Separación entre el nav y el contenedor principal */
