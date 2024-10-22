@@ -1,61 +1,57 @@
 /* Estilos generales del logo */
 .navbar-brand img {
-    max-width: 150px;  /* Tamaño estándar del logo */
-    height: auto;      /* Mantiene la proporción */
+    max-width: 150px;
+    height: auto;
 }
 
 /* Botones flotantes de redes sociales */
 .social-icons {
-    position: fixed; /* Mantener en posición fija por defecto */
-    right: 10px; /* Espacio desde el borde derecho de la pantalla */
-    top: 40%; /* Alineado verticalmente al centro */
+    position: fixed;
+    right: 10px;
+    top: 40%;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacio entre los íconos */
-    z-index: 1000; /* Asegura que estén encima de otros elementos */
+    gap: 10px;
+    z-index: 1000;
 }
 
-/* Estilo base para los íconos redondos */
 .social-icons a {
     display: inline-block;
     width: 50px;
     height: 50px;
     line-height: 50px;
-    border-radius: 50%; /* Hacer los íconos redondos */
-    background-color: #3b5998; /* Color de fondo inicial (Facebook) */
+    border-radius: 50%;
+    background-color: #3b5998;
     color: white;
     text-align: center;
     font-size: 24px;
     transition: background-color 0.3s;
 }
 
-/* Cambiar el color cuando se pasa el cursor por encima */
 .social-icons a:hover {
-    background-color: #555; /* Color al pasar el cursor */
+    background-color: #555;
 }
 
-/* Iconos de redes sociales específicos */
 .facebook {
-    background-color: #3b5998; /* Facebook */
+    background-color: #3b5998;
 }
 
 .instagram {
-    background-color: #e4405f; /* Instagram */
+    background-color: #e4405f;
 }
 
-/* Estilos de las cards (tarjetas) */
+/* Estilos de las cards */
 .pdf-card-container {
     display: grid;
     gap: 20px;
     justify-content: center;
     padding: 60px;
-    grid-template-columns: repeat(1, 1fr); /* 1 columna por defecto */
+    grid-template-columns: repeat(1, 1fr);
 }
 
-/* Pantallas más grandes (mínimo 768px) -> 2 columnas */
 @media (min-width: 768px) {
     .pdf-card-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -67,49 +63,48 @@
     text-align: center;
     padding: 15px;
     display: flex;
-    flex-direction: column; /* Flex para alinear contenido en columna */
-    justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
-    height: 100%; /* Altura automática para ajustarse al contenido */
-    max-width: 100%; /* Limitar el ancho al 100% del contenedor */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Asegura que nada se salga del contenedor */
+    overflow: hidden;
 }
 
 .pdf-card embed {
     width: 100%;
-    height: 200px; /* Ajusta según sea necesario */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-    margin-bottom: 15px; /* Espacio entre el PDF y el botón */
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .pdf-card button {
     background-color: #054c09;
     color: white;
     border: none;
-    padding: 10px 15px; /* Ajusta el padding según sea necesario */
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    width: 100%; /* Botón ocupa el 100% del contenedor */
-    max-width: 100%; /* Asegura que el botón no se salga del contenedor */
+    width: 100%;
+    max-width: 100%;
 }
 
 .pdf-card button:hover {
     background-color: #04680d;
 }
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 767px) {
     .pdf-card {
-        height: auto; /* Asegura que la tarjeta ajuste su altura en pantallas pequeñas */
+        height: auto;
     }
 
     .pdf-card embed {
-        height: 150px; /* Ajusta la altura del PDF en pantallas pequeñas */
+        height: 150px;
     }
 
     .pdf-card button {
-        padding: 8px; /* Ajusta el padding para pantallas pequeñas */
+        padding: 8px;
     }
 }
 
@@ -172,7 +167,6 @@
     background-color: #449d44;
 }
 
-/* Fondo oscuro detrás de la modal */
 .pdf-overlay {
     position: fixed;
     top: 0;
@@ -184,66 +178,48 @@
     display: none;
 }
 
-/* Estilo base para el iframe y la imagen de vista previa */
 .pdf-frame-computer {
-    display: none; /* Oculta el iframe por defecto */
+    display: none;
     width: 100%;
-    height: 300px; /* Ajusta el tamaño del iframe */
+    height: 300px;
 }
 
 .pdf-preview {
-    display: block; /* Muestra la imagen de vista previa por defecto */
+    display: block;
     width: 100%;
-    height: auto; /* Mantiene la proporción */
+    height: auto;
 }
 
-/* Mostrar el iframe solo en computadoras */
 @media (min-width: 768px) {
     .pdf-preview {
-        display: none; /* Oculta la imagen de vista previa en pantallas grandes */
+        display: none;
     }
     .pdf-frame-computer {
-        display: block; /* Muestra el iframe en pantallas grandes */
+        display: block;
     }
 }
 
-/* Asegúrate de que el iframe esté oculto en pantallas más pequeñas */
 @media (max-width: 767px) {
     .pdf-frame-computer {
-        display: none; /* Asegúrate de que el iframe no se muestre en teléfonos */
+        display: none;
     }
 }
 
 /* Estilos del slider */
 .carousel {
     width: 100%;
-    max-width: 500px; /* Tamaño máximo del slider */
-    margin: auto;
+    max-width: 800px; /* Aumentar el tamaño del slider */
+    margin: 20px auto; /* Centrar y agregar espacio superior/inferior */
     border-radius: 10px;
 }
 
-/* Imagen dentro del carousel */
 .carousel-inner img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-/* PDF Card styles */
-.pdf-card-container {
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    grid-template-columns: repeat(1, 1fr); /* 1 columna por defecto */
-}
-
-@media (min-width: 768px) {
-    .pdf-card-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
-    }
-}
-
+/* Espacio entre el nav y el main container */
 .custom-contenedor {
-    padding-top: 100px;     
+    padding-top: 100px; /* Espacio entre el nav y el contenedor */
 }
