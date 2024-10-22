@@ -205,26 +205,23 @@
     }
 }
 
-/* Ajustar el tamaño del carrusel */
+/* Estilo para el carrusel */
+/* Aquí ajustamos el tamaño del carrusel */
 .carousel {
-    width: 100%; /* Mantiene el carrusel al 100% del contenedor */
-    max-width: 800px; /* Ajusta este valor para el ancho máximo del carrusel */
-    height: 400px; /* Establece una altura fija para el carrusel */
-    margin: auto; /* Centra el carrusel en el contenedor */
-    border-radius: 10px; /* Bordes redondeados del carrusel */
-    overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
-    display: flex;
-    align-items: center; /* Centra verticalmente las imágenes */
-    justify-content: center; /* Centra horizontalmente las imágenes */
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    max-width: 800px; /* Ajusta el ancho máximo del carrusel */
+    height: 400px; /* Ajusta la altura del carrusel (IMPORTANTE: la altura fija evita que cambie con las imágenes) */
+    margin: auto; /* Centra el carrusel */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que las imágenes se salgan del carrusel */
 }
 
-/* Imagen dentro del carrusel */
+/* Estilo para las imágenes dentro del carrusel */
 .carousel-inner img {
     width: 100%; /* Ocupa todo el ancho del carrusel */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    object-fit: cover; /* Hace que la imagen se recorte para cubrir el espacio sin distorsionarse */
-    border-radius: 10px; /* Aplica el borde redondeado a las imágenes */
-    max-height: 100%; /* Evita que las imágenes crezcan más allá del carrusel */
+    height: 100%; /* Ajusta la altura de las imágenes para que coincidan con la altura del carrusel */
+    object-fit: cover; /* Las imágenes se recortarán para ocupar el espacio sin distorsionarse */
+    border-radius: 10px; /* Aplica el borde redondeado también a las imágenes */
 }
 
 /* Separación entre el nav y el contenedor principal */
