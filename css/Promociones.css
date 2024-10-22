@@ -205,21 +205,24 @@
     }
 }
 
-/* Estilos del slider */
+/* Ajustar el tamaño del carrusel */
 .carousel {
-    width: 100%;
-    max-width: 800px; /* Aumentar el tamaño del slider */
-    margin: 20px auto; /* Centrar y agregar espacio superior/inferior */
+    width: 100%; /* Mantener 100% del contenedor */
+    max-width: 800px; /* Cambia este valor para ajustar el tamaño del carrusel */
+    height: 500px; /* Altura fija del carrusel */
+    margin: auto;
     border-radius: 10px;
 }
 
+/* Imagen dentro del carrusel */
 .carousel-inner img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Mantener el ancho al 100% del contenedor */
+    height: 100%; /* Mantener la altura fija del carrusel */
+    object-fit: cover; /* Asegura que las imágenes rellenen el espacio sin distorsión */
     border-radius: 10px;
 }
 
-/* Espacio entre el nav y el main container */
+/* Separación entre el nav y el contenedor principal */
 .custom-contenedor {
-    padding-top: 100px; /* Espacio entre el nav y el contenedor */
+    padding-top: 100px; /* Ajusta este valor para agregar más espacio */
 }
