@@ -49,10 +49,8 @@ function toggleContent(card) {
             block: 'center'     // Centrar la tarjeta en la vista
         });
 
-        // Forzar la actualización del diseño
-        setTimeout(() => {
-            document.body.style.overflowX = 'hidden'; // Evitar desbordamiento horizontal
-        }, 300); // Ajusta el tiempo según sea necesario
+        // Ajustar el ancho de la tarjeta expandida
+        card.style.maxWidth = 'calc(100% - 40px)'; // Ajusta el valor según sea necesario
     }
 }
 
