@@ -217,9 +217,10 @@
 /* Estilos del slider */
 .carousel {
     width: 100%;
-    max-width: 300px; /* Tamaño máximo del slider */
+    max-width: 500px; /* Tamaño máximo del slider */
     margin: auto;
     border-radius: 10px;
+    height: 400px;
 }
 
 /* Imagen dentro del carousel */
@@ -234,7 +235,7 @@
     display: grid;
     gap: 20px;
     justify-content: center;
-    padding: 20px;
+    padding: 100px;
     grid-template-columns: repeat(1, 1fr); /* 1 columna por defecto */
 }
 
