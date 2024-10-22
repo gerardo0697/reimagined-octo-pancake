@@ -84,7 +84,7 @@ body {
 /* Estilos para los contenedores */
 .row.mb-4 > .col-12 > .p-4,
 .row.mb-4.d-flex.align-items-stretch > .col-md-6 > .p-4 {
-    background-color: #054c09;
+    background-color: #0B2538;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
