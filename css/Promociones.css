@@ -244,3 +244,7 @@
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
     }
 }
+
+.custom-contenedor {
+    padding: 100px;     
+}
