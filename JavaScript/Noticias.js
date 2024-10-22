@@ -48,5 +48,11 @@ function toggleContent(card) {
             behavior: 'smooth', // Desplazamiento suave
             block: 'center'     // Centrar la tarjeta en la vista
         });
+
+        // Forzar la actualización del diseño
+        setTimeout(() => {
+            document.body.style.overflowX = 'hidden'; // Evitar desbordamiento horizontal
+        }, 300); // Ajusta el tiempo según sea necesario
     }
 }
+
