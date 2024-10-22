@@ -216,13 +216,15 @@
     overflow: hidden; /* Evita que las imágenes se salgan del carrusel */
 }
 
-/* Estilo para las imágenes dentro del carrusel */
+/* Imagen dentro del carrusel */
 .carousel-inner img {
     width: 100%; /* Ocupa todo el ancho del carrusel */
     height: 100%; /* Ajusta la altura de las imágenes para que coincidan con la altura del carrusel */
-    object-fit: cover; /* Las imágenes se recortarán para ocupar el espacio sin distorsionarse */
+    object-fit: contain; /* Mantiene las proporciones de la imagen y ajusta la imagen sin recortarla */
     border-radius: 10px; /* Aplica el borde redondeado también a las imágenes */
+    background-color: #000; /* Añade un fondo negro para el área vacía si la imagen no ocupa todo el espacio */
 }
+
 
 /* Separación entre el nav y el contenedor principal */
 .custom-contenedor {
