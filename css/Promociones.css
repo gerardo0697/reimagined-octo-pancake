@@ -205,35 +205,30 @@
     }
 }
 
-/* Estilo para el carrusel */
-/* Aquí ajustamos el tamaño del carrusel */
+/* Ajustar el tamaño del carrusel */
 /* Ajustar el tamaño del carrusel */
 .carousel {
     width: 100%; /* Mantiene el carrusel al 100% del contenedor */
-    max-width: 800px; /* Ajusta este valor para el ancho máximo del carrusel */
-    height: 400px; /* Establece una altura fija para el carrusel */
-    margin: auto; /* Centra el carrusel en el contenedor */
+    max-width: 800px; /* Ancho máximo del carrusel */
+    height: 400px; /* Altura fija del carrusel */
+    margin: auto; /* Centra el carrusel */
     border-radius: 10px; /* Bordes redondeados del carrusel */
     overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+    position: relative; /* Posicionamiento relativo para manejar el contenido interno */
 }
 
 /* Imagen dentro del carrusel */
 .carousel-inner img {
-    max-width: 100%; /* Asegura que la imagen no se salga del ancho del carrusel */
-    max-height: 100%; /* Asegura que la imagen no exceda la altura del carrusel */
-    width: auto; /* Permite que las imágenes pequeñas mantengan su proporción original */
-    height: auto; /* Permite que las imágenes pequeñas mantengan su proporción original */
-    object-fit: contain; /* Asegura que las imágenes pequeñas no se estiren ni se recorten */
-    display: block; /* Evita el comportamiento inline de las imágenes */
-    margin: 0 auto; /* Centra la imagen en el carrusel */
-    border-radius: 10px; /* Aplica el borde redondeado también a las imágenes */
-    background-color: #000; /* Fondo negro si la imagen no llena el espacio */
+    width: 100%; /* Ajusta el ancho para que no se salga del carrusel */
+    height: 400px; /* Ajusta la altura para que ocupe todo el carrusel */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción sin ser recortada */
+    border-radius: 10px; /* Bordes redondeados también para las imágenes */
+    display: block; /* Asegura que la imagen sea tratada como bloque dentro del contenedor */
+    margin: auto; /* Centra la imagen dentro del contenedor del carrusel */
 }
-
 
 
 /* Separación entre el nav y el contenedor principal */
 .custom-contenedor {
     padding-top: 100px; /* Añade espacio entre el nav y el contenedor principal */
 }
-
