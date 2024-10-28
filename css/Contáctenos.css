@@ -1,0 +1,101 @@
+/* Estructura general */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Mapas */
+.map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px; /* Ajustable para un tamaño mediano */
+    border: 0;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-icons img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    margin-top: 20px;
+}
+
+.whatsapp-icon img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .map-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-icons img {
+        width: 70px;
+    }
+
+    .whatsapp-icon img {
+        width: 100px;
+    }
+}
+/* Asegurarse de que el body ocupe el 100% de la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para empujar el footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+/* El contenido debe crecer para llenar el espacio */
+.container {
+    flex: 1;
+}
+
+/* Footer fijo al fondo */
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
