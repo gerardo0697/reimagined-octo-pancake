@@ -24,6 +24,15 @@
     height: auto;      /* Mantiene la proporción */
 }
 
+.pdf-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #054c09;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
 
 
 /* Botones flotantes de redes sociales */

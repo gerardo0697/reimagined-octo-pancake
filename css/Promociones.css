@@ -206,7 +206,6 @@
 }
 
 /* Ajustar el tamaño del carrusel */
-/* Ajustar el tamaño del carrusel */
 .carousel {
     width: 100%; /* Mantiene el carrusel al 100% del contenedor */
     max-width: 800px; /* Ancho máximo del carrusel */
@@ -231,4 +230,24 @@
 /* Separación entre el nav y el contenedor principal */
 .custom-contenedor {
     padding-top: 100px; /* Añade espacio entre el nav y el contenedor principal */
+}
+
+/* Media query para pantallas específicas como el iPhone 5 */
+@media (min-width: 320px) and (max-width: 640px){
+
+
+    .social-icons {
+        position: static; /* Colocar debajo de las tarjetas */
+        flex-direction: row; /* Íconos en fila */
+        justify-content: center;
+        margin-top: 10px; /* Espacio superior para separación */
+        margin-bottom: 20px; /* Espacio inferior para separación */
+    }
+
+    .social-icons a {
+        width: 40px; /* Iconos más pequeños */
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
 }
