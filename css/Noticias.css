@@ -177,7 +177,7 @@ main {
     }
 
     .card-expanded {
-    position: fixed; /* Permite que se centre sin afectar el layout general */
+    
     top: 50px; /* Ajusta la distancia desde el top según el espacio del navbar */
     left: 50%;
     transform: translateX(-50%);
