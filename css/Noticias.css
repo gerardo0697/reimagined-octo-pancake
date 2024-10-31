@@ -177,19 +177,10 @@ main {
     }
 
     .card-expanded {
-    
-    top: 50px; /* Ajusta la distancia desde el top según el espacio del navbar */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw; /* Permite que ocupe el 90% del ancho de la pantalla */
-    max-width: 700px; /* Ancho máximo para pantallas grandes */
-    height: auto; /* Ajuste automático al contenido */
-    padding: 20px; /* Espacio interno para mejor apariencia */
-    background-color: white;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    overflow-y: auto; /* Habilita scroll en caso de desbordamiento vertical */
-}
+        max-width: calc(100% - 30px); /* Ajuste para que no toque los bordes */
+        margin: 0 auto; /* Centrar la tarjeta */
+        padding: 15px; /* Aumentar el padding interno */
+    }
 
 
     .card-expanded .card-img-top {
