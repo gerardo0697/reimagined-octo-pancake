@@ -3,9 +3,7 @@ body, html {
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
-*, *::before, *::after {
-    box-sizing: border-box; /* Incluye padding y bordes en el cálculo del ancho */
-}
+
 
 .pdf-title {
     font-size: 3rem;
