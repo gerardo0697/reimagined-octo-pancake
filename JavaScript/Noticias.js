@@ -4,7 +4,7 @@ function toggleContent(card) {
     var isExpanded = card.classList.contains('card-expanded');
     var button = card.querySelector('.show-more');
     var socialIcons = document.querySelector('.social-icons');
-    
+
     // Colapsar todas las tarjetas abiertas antes de expandir la actual
     var allCards = document.querySelectorAll('.card');
     allCards.forEach(function(otherCard) {
@@ -22,7 +22,6 @@ function toggleContent(card) {
         summaryText.style.display = '-webkit-box';
         card.classList.remove('card-expanded');
         button.textContent = 'Ver más';
-        document.body.style.overflowX = ''; // Restaurar el overflow
 
         // Mostrar íconos de redes sociales si es una pantalla grande
         if (window.innerWidth > 576) {
@@ -34,7 +33,6 @@ function toggleContent(card) {
         summaryText.style.display = 'none';
         card.classList.add('card-expanded');
         button.textContent = 'Ver menos';
-        document.body.style.overflowX = 'hidden'; // Evitar overflow horizontal
 
         // Ocultar íconos de redes sociales en pantallas grandes
         if (window.innerWidth > 576) {
@@ -48,10 +46,11 @@ function toggleContent(card) {
         });
 
         // Ajustar el ancho de la tarjeta expandida
-        card.style.width = '100%';
+        card.style.width = '100%'; // Usar el ancho completo del contenedor
         card.style.maxWidth = '1200px'; // Ajuste opcional
+
+        // Asegurar que el body permita el desplazamiento
+        document.body.style.overflowY = 'auto'; // Habilitar scroll vertical
     }
 }
-
-
 
