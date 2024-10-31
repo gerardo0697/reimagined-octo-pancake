@@ -176,6 +176,14 @@ body {
         margin: 0 auto; /* Centrar la tarjeta */
         padding: 15px; /* Aumentar el padding interno */
     }
+    .card-expanded .card-img-top {
+    width: auto; /* Ajuste automático del ancho */
+    max-width: 90%; /* Limita el ancho máximo de la imagen al 90% del contenedor expandido */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que toda la imagen se muestre sin recortes */
+    margin: 20px auto; /* Centrado de la imagen en el contenedor */
+}
+
     
 
 }
