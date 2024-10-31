@@ -176,14 +176,21 @@ main {
         font-size: 12px;
     }
 
-     .card-expanded {
-    position: fixed; /* Cambiar a fixed puede reducir el impacto de scroll */
-    top: 50%;
+    .card-expanded {
+    position: fixed; /* Permite que se centre sin afectar el layout general */
+    top: 50px; /* Ajusta la distancia desde el top según el espacio del navbar */
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrado total en la pantalla */
-    max-width: 90vw; /* Limitar el ancho en pantallas pequeñas */
-    width: auto;
+    transform: translateX(-50%);
+    width: 90vw; /* Permite que ocupe el 90% del ancho de la pantalla */
+    max-width: 700px; /* Ancho máximo para pantallas grandes */
+    height: auto; /* Ajuste automático al contenido */
+    padding: 20px; /* Espacio interno para mejor apariencia */
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow-y: auto; /* Habilita scroll en caso de desbordamiento vertical */
 }
+
 
     .card-expanded .card-img-top {
     width: auto; /* Ajuste automático del ancho */
