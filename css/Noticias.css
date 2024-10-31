@@ -1,6 +1,5 @@
-body {
-    margin: 0; /* Sin margen en el body */
-    padding: 0; /* Sin padding en el body */
+body, html {
+    width: 100%;
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
