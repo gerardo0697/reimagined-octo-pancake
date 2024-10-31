@@ -172,7 +172,7 @@ body {
     }
 
     .card-expanded {
-        width: calc(100% - 30px); /* Ajustar el ancho en pantallas pequeñas */
+        width: calc(100% - 20px); /* Ajustar el ancho en pantallas pequeñas */
     }
 }
 
