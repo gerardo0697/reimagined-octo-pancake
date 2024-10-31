@@ -172,10 +172,14 @@ body {
     }
 
      .card-expanded {
-        max-width: calc(100% - 30px); /* Ajuste para que no toque los bordes */
-        margin: 0 auto; /* Centrar la tarjeta */
-        padding: 15px; /* Aumentar el padding interno */
-    }
+    position: fixed; /* Cambiar a fixed puede reducir el impacto de scroll */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado total en la pantalla */
+    max-width: 90vw; /* Limitar el ancho en pantallas pequeñas */
+    width: auto;
+}
+
     .card-expanded .card-img-top {
     width: auto; /* Ajuste automático del ancho */
     max-width: 90%; /* Limita el ancho máximo de la imagen al 90% del contenedor expandido */
