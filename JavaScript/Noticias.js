@@ -48,9 +48,7 @@ function toggleContent(card) {
         // Ajustar el ancho de la tarjeta expandida
         card.style.width = '100%'; // Usar el ancho completo del contenedor
         card.style.maxWidth = '1200px'; // Ajuste opcional
-
-        // Asegurar que el body permita el desplazamiento
-        document.body.style.overflowY = 'auto'; // Habilitar scroll vertical
     }
 }
+
 
