@@ -7,6 +7,11 @@ body {
 *, *::before, *::after {
     box-sizing: border-box; /* Incluye padding y bordes en el cálculo del ancho */
 }
+main {
+    overflow: hidden;
+    max-width: 100vw; /* Limita el ancho al 100% del viewport */
+}
+
 
 .pdf-title {
     font-size: 3rem;
