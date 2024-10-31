@@ -22,7 +22,8 @@ function toggleContent(card) {
         summaryText.style.display = '-webkit-box';
         card.classList.remove('card-expanded');
         button.textContent = 'Ver más';
-        
+        document.body.style.overflowX = ''; // Restaurar el overflow
+
         // Mostrar íconos de redes sociales si es una pantalla grande
         if (window.innerWidth > 576) {
             socialIcons.style.display = 'flex';
@@ -33,7 +34,8 @@ function toggleContent(card) {
         summaryText.style.display = 'none';
         card.classList.add('card-expanded');
         button.textContent = 'Ver menos';
-        
+        document.body.style.overflowX = 'hidden'; // Evitar overflow horizontal
+
         // Ocultar íconos de redes sociales en pantallas grandes
         if (window.innerWidth > 576) {
             socialIcons.style.display = 'none';
@@ -44,21 +46,9 @@ function toggleContent(card) {
             behavior: 'smooth',
             block: 'center'
         });
-    }
 
-    // Manejo del overflow del body
-    if (card.classList.contains('card-expanded')) {
-        document.body.style.overflowY = 'hidden'; // Evitar desplazamiento vertical del body
-        card.style.overflowY = 'auto'; // Habilitar desplazamiento en la tarjeta expandida
-        card.style.maxHeight = '90vh'; // Limitar la altura máxima para la tarjeta
-    } else {
-        document.body.style.overflowY = ''; // Restaurar el desplazamiento vertical del body
-        card.style.overflowY = ''; // Restaurar el overflow de la tarjeta
-        card.style.maxHeight = ''; // Restaurar la altura máxima
+        // Ajustar el ancho de la tarjeta expandida
+        card.style.width = '100%';
+        card.style.maxWidth = '1200px'; // Ajuste opcional
     }
-
-    // Ajustar el ancho de la tarjeta expandida
-    card.style.width = '100%'; // Usar el ancho completo del contenedor
-    card.style.maxWidth = '1200px'; // Ajuste opcional
 }
-
