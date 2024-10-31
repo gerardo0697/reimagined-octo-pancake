@@ -54,3 +54,18 @@ function toggleContent(card) {
         card.style.maxWidth = '1200px'; // Ajusta este valor según sea necesario
     }
 }
+
+function toggleContent(card) {
+    const isExpanded = card.classList.contains('card-expanded');
+    
+    // Expande o colapsa la tarjeta
+    card.classList.toggle('card-expanded');
+    
+    if (isExpanded) {
+        // Si se colapsa, restablece el overflow del body
+        document.body.style.overflowX = '';
+    } else {
+        // Si se expande, oculta el overflow horizontal
+        document.body.style.overflowX = 'hidden';
+    }
+}
