@@ -3,27 +3,31 @@ function toggleContent(card) {
     var summaryText = card.querySelector('.card-text-summary');
     var isExpanded = card.classList.contains('card-expanded');
     var button = card.querySelector('.show-more');
-    var socialIcons = document.querySelector('.social-icons');
+    var socialIcons = document.querySelector('.social-icons'); // Seleccionar los íconos de redes sociales
 
-    // Colapsar todas las tarjetas abiertas antes de expandir la actual
+    // Colapsar todas las tarjetas abiertas antes de expandir la nueva
     var allCards = document.querySelectorAll('.card');
     allCards.forEach(function(otherCard) {
         if (otherCard !== card && otherCard.classList.contains('card-expanded')) {
+            var otherFullText = otherCard.querySelector('.full-text');
+            var otherSummaryText = otherCard.querySelector('.card-text-summary');
+            otherFullText.style.display = 'none';
+            otherSummaryText.style.display = '-webkit-box';
             otherCard.classList.remove('card-expanded');
-            otherCard.querySelector('.full-text').style.display = 'none';
-            otherCard.querySelector('.card-text-summary').style.display = '-webkit-box';
-            otherCard.querySelector('.show-more').textContent = 'Ver más';
+            var otherButton = otherCard.querySelector('.show-more');
+            otherButton.textContent = 'Ver más'; // Cambiar el texto del botón al colapsar
         }
     });
 
+    // Expandir o colapsar la tarjeta actual
     if (isExpanded) {
         // Si está expandida, colapsarla
         fullText.style.display = 'none';
         summaryText.style.display = '-webkit-box';
         card.classList.remove('card-expanded');
-        button.textContent = 'Ver más';
+        button.textContent = 'Ver más'; // Cambiar el texto del botón al colapsar
 
-        // Mostrar íconos de redes sociales si es una pantalla grande
+        // Mostrar los íconos sociales nuevamente al colapsar en pantallas más grandes
         if (window.innerWidth > 576) {
             socialIcons.style.display = 'flex';
         }
@@ -32,23 +36,21 @@ function toggleContent(card) {
         fullText.style.display = 'block';
         summaryText.style.display = 'none';
         card.classList.add('card-expanded');
-        button.textContent = 'Ver menos';
+        button.textContent = 'Ver menos'; // Cambiar el texto del botón al expandir
 
-        // Ocultar íconos de redes sociales en pantallas grandes
+        // Ocultar los íconos sociales al expandir en pantallas más grandes
         if (window.innerWidth > 576) {
             socialIcons.style.display = 'none';
         }
 
-        // Centrar la tarjeta en la vista
+        // Desplazar la tarjeta a la vista del usuario
         card.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
+            behavior: 'smooth', // Desplazamiento suave
+            block: 'center'     // Centrar la tarjeta en la vista
         });
 
         // Ajustar el ancho de la tarjeta expandida
         card.style.width = '100%'; // Usar el ancho completo del contenedor
-        card.style.maxWidth = '1200px'; // Ajuste opcional
+        card.style.maxWidth = '1200px'; // Ajusta este valor según sea necesario
     }
 }
-
-
