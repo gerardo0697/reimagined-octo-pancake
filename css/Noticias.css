@@ -171,8 +171,10 @@ body {
         font-size: 12px;
     }
 
-    .card-expanded {
-        width: calc(100% - 20px); /* Ajustar el ancho en pantallas pequeñas */
+     .card-expanded {
+        max-width: calc(100% - 30px); /* Ajuste para que no toque los bordes */
+        margin: 0 auto; /* Centrar la tarjeta */
+        padding: 15px; /* Aumentar el padding interno */
     }
 }
 
