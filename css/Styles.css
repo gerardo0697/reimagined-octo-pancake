@@ -173,7 +173,87 @@
 
 
 /* Media query para pantallas específicas como el iPhone 5 */
-@media (min-width: 320px) and (max-width: 640px){
+@media (max-width: 320px) {
+    .custom-card-3 {
+        min-height: 300px !important;
+        overflow: visible !important; /* Asegura que el contenido se muestre */
+        white-space: normal !important; /* Permite que el texto se envuelva */
+        
+    }
+    .card-title1{
+        font-size: 12px !important; /* Tamaño de texto más pequeño */
+        justify-items: center;
+        padding: none;
+        margin: none;
+    }
+    .custom-title {
+        word-wrap: break-word ;
+        margin: 0px;
+    }    
+    .custom-card-text1 {
+        font-size: 12px !important;
+    }
+    .card{
+        min-width: 145px;
+    }
+}
+@media (min-width: 320px) and (max-width: 390px){
+    .navbar-brand img {
+        max-width: 100px; /* Logo más pequeño en móviles */
+    }
+    .card-title1{
+        font-size: 16px; /* Tamaño de texto más pequeño */
+        justify-items: center;
+        padding: none;
+        margin: none;
+    }
+
+    .social-icons {
+        position: static; /* Colocar debajo de las tarjetas */
+        flex-direction: row; /* Íconos en fila */
+        justify-content: center;
+        margin-top: 10px; /* Espacio superior para separación */
+        margin-bottom: 20px; /* Espacio inferior para separación */
+    }
+
+    .social-icons a {
+        width: 40px; /* Iconos más pequeños */
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .card {
+        max-height: 190px;
+        max-width: 100%; /* Asegura que las tarjetas no se desborden */
+        overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+        padding: 10px; /* Reducir el padding en móviles */
+        
+        
+    }
+
+    .custom-img-small {
+        width: 70%; /* Ajustar el tamaño de la imagen en móviles */
+        margin-top: 10px !important;
+        
+    }
+
+    .card img {
+        height: auto; /* Mantener proporción */
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+    .custom-card-text1 {
+        font-size: 14px ;
+    }
+    .custom-card-3 {
+        min-height: 300px !important;
+        overflow: visible !important; /* Asegura que el contenido se muestre */
+        white-space: normal !important; /* Permite que el texto se envuelva */
+        
+    }
+
+}
+
+@media (min-width: 391px) and (max-width: 500px){
     .navbar-brand img {
         max-width: 100px; /* Logo más pequeño en móviles */
     }
@@ -198,6 +278,28 @@
         line-height: 40px;
         font-size: 20px;
     }
+    .card {
+        height: auto;
+        max-width: 100%; /* Asegura que las tarjetas no se desborden */
+        overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+        padding: 10px; /* Reducir el padding en móviles */
+        
+    }
+ 
+
+    .custom-img-small {
+        width: 70%; /* Ajustar el tamaño de la imagen en móviles */
+        margin-top: 20px !important;
+    }
+
+    .card img {
+        height: auto; /* Mantener proporción */
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+    .custom-card-text1 {
+        font-size: 16px !important;
+    }
+
     
 
 }
@@ -225,6 +327,25 @@
         line-height: 45px;
         font-size: 22px;
     }
+    .card {
+        height: auto; /* Permitir que las tarjetas se ajusten automáticamente */
+        max-width: 100%; /* Asegura que las tarjetas no se desborden */
+        overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+        padding: 10px; /* Reducir el padding en móviles */
+    }
+
+    .custom-img-small {
+        width: 70%; /* Ajustar el tamaño de la imagen en móviles */
+    }
+
+    .card img {
+        height: auto; /* Mantener proporción */
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+    .custom-card-text1 {
+        font-size: 18px !important;
+    }
+
 
 }
 
@@ -238,7 +359,7 @@
         min-width: 250px;
     }
     .card-title1{
-        font-size: 16px; /* Tamaño de texto más pequeño */
+        font-size: 18px; /* Tamaño de texto más pequeño */
         
         padding: none;
         margin: none;
@@ -257,6 +378,9 @@
     .card img {
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+    .custom-card-text1 {
+        font-size: 18px !important;
     }
 
 
@@ -291,6 +415,9 @@
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
     }
+    .custom-card-text1 {
+        font-size: 18px !important;
+    }
 
  
 }
@@ -305,7 +432,6 @@
         margin-bottom: 20px; /* Espaciado entre tarjetas en pantallas muy grandes */
     }
     .card-title1{
-        word-wrap: break-word;
         padding: none;
         margin: none;
     }
@@ -324,6 +450,7 @@
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
     }
+
 
    
 }
@@ -373,89 +500,16 @@ footer .small-text {
     display: block;
     margin: 0 auto 20px auto; /* Centra la imagen y añade un margen inferior de 20px */
 }
+.card-title1{
+    color: white;
+}
+.custom-card-text1{
+    color: white;
+}
+
 
 .card:hover {
     transform: scale(1.05); /* Aumenta el tamaño de la card un 5% */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
-@media (max-width: 320px) {
-    .cards-grid1 .col-12 {
-        margin: 20px; /* Espaciado entre tarjetas en pantallas pequeñas */
-      
-        
-        padding: none;
-        
-    }
-    .card-title1{
-        font-size: 16px !important; /* Tamaño de texto más pequeño */
-        justify-items: center;
-        padding: none;
-        margin: none;
-    }
-    .card {
-        padding: 0px; /* Reducir el padding para mejor ajuste */
-        margin: 0px; /* Evitar márgenes que causen desbordamiento */
-        max-height: 170px;
-    }
-
-    .custom-img-small {
-        width: 70%; /* Ajustar el tamaño de la imagen */
-    }
-
-    .card img {
-        height: auto; /* Mantener proporción */
-        max-width: 100%; /* Asegura que la imagen no se desborde */
-    }
-    .custom-img-small {
-        height: auto;
-        display: block;
-        margin: 0 auto 0px auto; /* Centra la imagen y añade un margen inferior de 20px */
-    }
-
-
-}
-/* Asegurar que las tarjetas se centren cuando hay menos tarjetas en la fila */
-@media (max-width: 576px) {
-    
-}
-
-@media (min-width: 576px) {
-    .cards-grid1 .col-sm-6 {
-        margin-bottom: 20px; /* Espaciado entre tarjetas en pantallas medianas */
-    }
-    .card {
-        padding: 15px; /* Ajustar el padding en tablets */
-    }
-
-    .custom-img-small {
-        width: 70%; /* Ajustar el tamaño de la imagen en tablets */
-    }
-
-    .card img {
-        height: auto; /* Aumentar la altura de la imagen en tablets */
-    }
-}
-
-@media (min-width: 768px) {
-    .cards-grid1 .col-md-4 {
-        
-        margin-bottom: 20px; /* Espaciado entre tarjetas en pantallas grandes */
-    }
-    .card {
-        padding: 20px; /* Mantener el padding estándar en pantallas medianas */
-    }
-
-    .card img {
-        height: auto; /* Aumentar la altura de la imagen */
-    }
-    .card-title1{
-        word-wrap: break-word;
-    }
-}
-
-@media (min-width: 992px) {
-   
-}
-
-/*termina css del primer contenedor */
