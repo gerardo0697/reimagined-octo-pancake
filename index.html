@@ -26,10 +26,11 @@
       <img src="./Logo 2.2.png" alt="Cargando..." class="preloader-img">
     </div>
 
-    <!-- Imagen Anuncio -->
-<div id="adPopup" class="ad-popup d-none">
-    <img src="./Aq.gif" alt="Anuncio" class="ad-image">
+<!-- Imagen Emergente -->
+<div id="notifierElement" class="hidden-element d-none">
+    <img src="./Aq.gif" alt="Notificación" class="notification-image">
 </div>
+
 
     
   <!-- Header con Nav -->
@@ -317,26 +318,25 @@
     
     <!-- Script para ocultar el preloader cuando la página esté completamente cargada -->
     <script>
-      window.addEventListener('load', function () {
-    // Ocultar el preloader
-    document.body.classList.add('loaded');
-
-    // Mostrar el anuncio después de un pequeño retraso
-    setTimeout(() => {
-        const adPopup = document.getElementById('adPopup');
-        adPopup.classList.remove('d-none');
-    }, 500); // Puedes ajustar el tiempo de aparición
-
-    // Cerrar el anuncio al hacer clic fuera de la imagen
-    const adPopup = document.getElementById('adPopup');
-    adPopup.addEventListener('click', function (e) {
-        if (e.target === adPopup) {
-            adPopup.classList.add('d-none');
-        }
-    });
-});
-
+        window.addEventListener('load', function () {
+            // Ocultar el preloader
+            document.body.classList.add('loaded');
+    
+            // Mostrar la imagen emergente después de un pequeño retraso
+            setTimeout(() => {
+                const notifier = document.getElementById('notifierElement');
+                notifier.classList.remove('d-none');
+            }, 500); // Ajusta el tiempo de aparición según lo necesites
+    
+            // Cerrar la imagen emergente al hacer clic fuera de la imagen
+            const notifier = document.getElementById('notifierElement');
+            notifier.addEventListener('click', function (e) {
+                if (e.target === notifier) {
+                    notifier.classList.add('d-none');
+                }
+            });
+        });
     </script>
-
+    
 </body>
 </html>

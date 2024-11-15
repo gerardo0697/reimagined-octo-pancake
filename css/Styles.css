@@ -64,7 +64,7 @@
 }
 
 /* Estilos para el contenedor de la imagen emergente */
-.ad-popup {
+.hidden-element {
     position: fixed;
     top: 0;
     left: 0;
@@ -76,15 +76,19 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
     cursor: pointer;
-  }
-  
-  /* Estilo para la imagen del anuncio */
-  .ad-image {
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo para la imagen de la notificación */
+.notification-image {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
     cursor: default;
-  }
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
   
 
 /* Botones flotantes de redes sociales */
