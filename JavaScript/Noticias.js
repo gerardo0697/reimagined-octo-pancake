@@ -43,6 +43,8 @@ function toggleContent(card) {
             socialIcons.style.display = 'none';
         }
 
+        
+
         // Desplazar la tarjeta a la vista del usuario
         card.scrollIntoView({
             behavior: 'smooth', // Desplazamiento suave
