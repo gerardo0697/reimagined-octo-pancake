@@ -19,9 +19,8 @@ function toggleContent(card) {
         }
     });
 
-    // Expandir o colapsar la tarjeta actual
     if (isExpanded) {
-        // Colapsar
+        // Colapsar la tarjeta
         fullText.style.display = 'none';
         summaryText.style.display = '-webkit-box';
         card.classList.remove('card-expanded');
@@ -30,28 +29,35 @@ function toggleContent(card) {
         card.style.width = '';
         card.style.margin = '';
     } else {
-        // Expandir
+        // Expandir la tarjeta
         fullText.style.display = 'block';
         summaryText.style.display = 'none';
         card.classList.add('card-expanded');
         button.textContent = 'Ver menos';
         socialIcons.style.display = 'none';
 
-        // Obtener el ancho del contenedor y ajustar el ancho de la tarjeta
+        // Ajustar el ancho de la tarjeta
         const mainContainer = document.querySelector('main.container');
         const containerWidth = mainContainer.clientWidth;
-        const desiredCardWidth = containerWidth * 0.8; // Tarjeta ocupará el 80% del contenedor
-
+        const desiredCardWidth = containerWidth * 0.8;
         card.style.width = desiredCardWidth + 'px';
         card.style.maxWidth = '90%';
         card.style.marginLeft = 'auto';
         card.style.marginRight = 'auto';
-        card.style.padding = '0'; // Eliminar padding extra
+        card.style.padding = '0';
 
-        // Desplazar la tarjeta a la vista del usuario
-        card.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
+        // Ajustar la vista para que la tarjeta sea visible tanto en el eje X como en el Y
+        const cardRect = card.getBoundingClientRect();
+        const containerRect = mainContainer.getBoundingClientRect();
+
+        // Calcular el desplazamiento necesario
+        const scrollX = cardRect.left + window.scrollX - (window.innerWidth - cardRect.width) / 2;
+        const scrollY = cardRect.top + window.scrollY - (window.innerHeight - cardRect.height) / 2;
+
+        window.scrollTo({
+            left: scrollX,
+            top: scrollY,
+            behavior: 'smooth'
         });
     }
 }
