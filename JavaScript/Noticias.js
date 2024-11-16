@@ -41,7 +41,7 @@ function toggleContent(card) {
         const containerWidth = mainContainer.clientWidth;
         const desiredCardWidth = containerWidth * 0.8;
         card.style.width = desiredCardWidth + 'px';
-        card.style.maxWidth = '90%';
+        card.style.maxWidth = '100%';
         card.style.marginLeft = 'auto';
         card.style.marginRight = 'auto';
         card.style.padding = '0';
