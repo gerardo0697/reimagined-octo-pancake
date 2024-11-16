@@ -232,6 +232,15 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .custom-contenedor {
+        padding-top: 150px; /* Añade espacio entre el nav y el contenedor principal */
+    }
+    .pdf-modal {
+      margin-top: 60px;
+    }
+}
+
 /* Ajustar el tamaño del carrusel */
 .carousel {
     width: 100%; /* Mantiene el carrusel al 100% del contenedor */
