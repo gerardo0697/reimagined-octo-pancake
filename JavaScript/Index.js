@@ -58,3 +58,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+window.addEventListener('load', function () {
+    // Ocultar el preloader
+    document.body.classList.add('loaded');
+
+    // Mostrar la imagen emergente después de un pequeño retraso
+    setTimeout(() => {
+        const notifier = document.getElementById('notifierElement');
+        notifier.classList.remove('d-none');
+    }, 500); // Ajusta el tiempo de aparición según lo necesites
+
+    // Cerrar la imagen emergente al hacer clic fuera de la imagen
+    const notifier = document.getElementById('notifierElement');
+    notifier.addEventListener('click', function (e) {
+        if (e.target === notifier) {
+            notifier.classList.add('d-none');
+        }
+    });
+});
