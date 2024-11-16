@@ -49,11 +49,7 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 768px) {
-    .pdf-card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+
 
 .pdf-card {
     background-color: #3b5998;
@@ -73,7 +69,7 @@
 
 .pdf-card embed {
     width: 100%;
-    height: 200px;
+    height: 485px;
     object-fit: cover;
     margin-bottom: 15px;
 }
@@ -94,19 +90,7 @@
     background-color: #04680d;
 }
 
-@media (max-width: 767px) {
-    .pdf-card {
-        height: auto;
-    }
 
-    .pdf-card embed {
-        height: 150px;
-    }
-
-    .pdf-card button {
-        padding: 8px;
-    }
-}
 
 /* Estilos del visor PDF (modal) */
 .pdf-modal {
@@ -191,6 +175,29 @@
 }
 
 @media (min-width: 768px) {
+    .pdf-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 767px) {
+    .pdf-card {
+        height: auto;
+    }
+
+    .pdf-card embed {
+        height: 150px;
+    }
+
+    .pdf-card button {
+        padding: 8px;
+    }
+    .custom-contenedor {
+        padding-top: 20px; /* Añade espacio entre el nav y el contenedor principal */
+    }
+    
+}
+
+@media (min-width: 768px) {
     .pdf-preview {
         display: none;
     }
@@ -202,6 +209,26 @@
 @media (max-width: 767px) {
     .pdf-frame-computer {
         display: none;
+    }
+}
+
+/* Media query para pantallas específicas como el iPhone 5 */
+@media (min-width: 320px) and (max-width: 640px){
+
+
+    .social-icons {
+        position: static; /* Colocar debajo de las tarjetas */
+        flex-direction: row; /* Íconos en fila */
+        justify-content: center;
+        margin-top: 10px; /* Espacio superior para separación */
+        margin-bottom: 20px; /* Espacio inferior para separación */
+    }
+
+    .social-icons a {
+        width: 40px; /* Iconos más pequeños */
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
     }
 }
 
@@ -229,25 +256,6 @@
 
 /* Separación entre el nav y el contenedor principal */
 .custom-contenedor {
-    padding-top: 100px; /* Añade espacio entre el nav y el contenedor principal */
+    padding-top: 50px; /* Añade espacio entre el nav y el contenedor principal */
 }
 
-/* Media query para pantallas específicas como el iPhone 5 */
-@media (min-width: 320px) and (max-width: 640px){
-
-
-    .social-icons {
-        position: static; /* Colocar debajo de las tarjetas */
-        flex-direction: row; /* Íconos en fila */
-        justify-content: center;
-        margin-top: 10px; /* Espacio superior para separación */
-        margin-bottom: 20px; /* Espacio inferior para separación */
-    }
-
-    .social-icons a {
-        width: 40px; /* Iconos más pequeños */
-        height: 40px;
-        line-height: 40px;
-        font-size: 20px;
-    }
-}

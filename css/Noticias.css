@@ -171,7 +171,7 @@ main {
     }
 
     .card-expanded {
-        width: calc(100% - 5px); /* Ajustar el ancho en pantallas pequeñas */
+        width: calc(100% - 60px); /* Ajustar el ancho en pantallas pequeñas */
         margin-left: 20px !important;
         margin-right: 20px !important;
     }
