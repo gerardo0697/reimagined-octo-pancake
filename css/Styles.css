@@ -83,7 +83,7 @@
 .notification-image {
     width: 80%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     cursor: default;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -550,13 +550,27 @@
 }
 @media (min-width: 1500px) {
     .notification-image {
-        width: 50%;
+        width: 60%;
         height: auto;
     }
 }
 @media (min-width: 1800px) {
     .notification-image {
-        width: 40%;
+        width: 50%;
+        height: auto;
+    }
+    
+}
+@media (min-width: 2000px) {
+    .notification-image {
+        width: 50%;
+        height: auto;
+    }
+    
+}
+@media (min-width: 2200px) {
+    .notification-image {
+        width: 46%;
         height: auto;
     }
     
