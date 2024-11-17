@@ -81,8 +81,8 @@
 
 /* Estilo para la imagen de la notificación */
 .notification-image {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
+    height: auto;
     object-fit: contain;
     cursor: default;
     border-radius: 8px;
@@ -131,6 +131,49 @@
 }
 
 /* Grilla de las tarjetas */
+/*css del primer contenedor*/
+
+.cards-grid1 {
+    margin: 0 auto; /* Centrar el contenedor principal */
+}
+
+
+.first-container1 {
+    padding: 2px; /* Espaciado alrededor del contenedor */
+}
+
+/* Estilos específicos para cada tarjeta */
+.card {
+    transition: transform 0.2s; /* Efecto de hover */
+}
+.custom-card-background {
+    background-color: #0B2538;
+}
+.custom-card-round {
+    border-radius: 20%;
+    overflow: hidden;
+}  
+.custom-card-text {
+    color: white;
+}
+.custom-img-small {
+    width: 50% !important; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centra la imagen y añade un margen inferior de 20px */
+}
+.card-title1{
+    color: white;
+}
+.custom-card-text1{
+    color: white;
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la card un 5% */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
 
  
 
@@ -223,6 +266,7 @@
     .card{
         min-width: 145px;
     }
+    
 }
 @media (min-width: 320px) and (max-width: 390px){
     .navbar-brand img {
@@ -277,6 +321,12 @@
         white-space: normal !important; /* Permite que el texto se envuelva */
         
     }
+    .notification-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    
 
 }
 
@@ -326,9 +376,10 @@
     .custom-card-text1 {
         font-size: 16px !important;
     }
-
-    
-
+    .notification-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Pantallas medianas (tablets) */
@@ -414,7 +465,7 @@
 }
 
 /* Pantallas grandes (desktops grandes) */
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1280px) {
     .navbar-brand img {
         max-width: 150px; /* Tamaño estándar en desktops grandes */
     }
@@ -445,12 +496,17 @@
     .custom-card-text1 {
         font-size: 18px !important;
     }
+    .notification-image {
+        width: 70%;
+        height: auto;
+        
+    }
 
  
 }
 
 /* Pantallas muy grandes (desktops amplios) */
-@media (min-width: 1201px) {
+@media (min-width: 1281px) {
     .navbar-brand img {
         max-width: 180px; /* Tamaño más grande en pantallas muy grandes */
     }
@@ -477,11 +533,28 @@
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
     }
-
-
-   
+    .notification-image {
+        width: 70%;
+        height: auto;
+    
+    }
 }
 
+
+@media (min-width: 1300px) {
+    .notification-image {
+        width: 70%;
+        height: auto;
+    }
+    
+}
+@media (min-width: 1800px) {
+    .notification-image {
+        width: 40%;
+        height: auto;
+    }
+    
+}
 
 
 .footer-title {
@@ -496,47 +569,4 @@ footer .small-text {
     font-size: 0.8rem; /* Tamaño del texto para los derechos reservados */
 }
 
-/*css del primer contenedor*/
-
-.cards-grid1 {
-    margin: 0 auto; /* Centrar el contenedor principal */
-}
-
-
-.first-container1 {
-    padding: 2px; /* Espaciado alrededor del contenedor */
-}
-
-/* Estilos específicos para cada tarjeta */
-.card {
-    transition: transform 0.2s; /* Efecto de hover */
-}
-.custom-card-background {
-    background-color: #0B2538;
-}
-.custom-card-round {
-    border-radius: 20%;
-    overflow: hidden;
-}  
-.custom-card-text {
-    color: white;
-}
-.custom-img-small {
-    width: 50% !important; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto; /* Centra la imagen y añade un margen inferior de 20px */
-}
-.card-title1{
-    color: white;
-}
-.custom-card-text1{
-    color: white;
-}
-
-
-.card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño de la card un 5% */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
-}
 

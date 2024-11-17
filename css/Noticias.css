@@ -148,6 +148,20 @@ main {
 .instagram {
     background-color: #e4405f; /* Instagram */
 }
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* Estilos responsivos */
 @media (min-width: 310px) and (max-width: 575px) {
