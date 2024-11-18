@@ -1,3 +1,4 @@
+
 /* En tu archivo Styles.css */
 .hidden {
     opacity: 0;
@@ -505,6 +506,7 @@
     .card-title1{
         padding: none;
         margin: none;
+        font-size: 24px;
     }
     .card {
         height: auto; /* Permitir que las tarjetas se ajusten automáticamente */
@@ -521,6 +523,9 @@
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
     }
+    .custom-card-text1 {
+        font-size: 24px !important;
+    }
 
 }
 
@@ -535,8 +540,5 @@ footer p {
 footer .small-text {
     font-size: 0.8rem; /* Tamaño del texto para los derechos reservados */
 }
-
-
-
 
 
