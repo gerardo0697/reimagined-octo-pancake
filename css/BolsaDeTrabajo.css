@@ -195,7 +195,7 @@ h3 {
     }
 
     .pdf-card iframe {
-        height: 500px; /* Reducir la altura del PDF en pantallas grandes */
+        height: 850px; /* Reducir la altura del PDF en pantallas grandes */
     }
 
     .pdf-modal {
@@ -211,7 +211,7 @@ h3 {
         height: 80%;    }
 
     .pdf-card iframe {
-        height: 350px; /* Altura ajustada para pantallas medianas */
+        height: 650px; /* Altura ajustada para pantallas medianas */
     }
 
     .pdf-modal {
