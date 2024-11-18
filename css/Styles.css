@@ -1,4 +1,3 @@
-
 /* En tu archivo Styles.css */
 .hidden {
     opacity: 0;
@@ -81,13 +80,14 @@
 
 /* Estilo para la imagen de la notificación */
 .notification-image {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
+    max-width: 97%;
+    max-height: 80%;
+    object-fit: contain;
     cursor: default;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 
   
 
@@ -321,10 +321,6 @@
         white-space: normal !important; /* Permite que el texto se envuelva */
         
     }
-    .notification-image {
-        width: 100%;
-        height: auto;
-    }
     
     
 
@@ -376,10 +372,7 @@
     .custom-card-text1 {
         font-size: 16px !important;
     }
-    .notification-image {
-        width: 100%;
-        height: auto;
-    }
+   
 }
 
 /* Pantallas medianas (tablets) */
@@ -496,11 +489,6 @@
     .custom-card-text1 {
         font-size: 18px !important;
     }
-    .notification-image {
-        width: 50%;
-        height: auto;
-        
-    }
 
  
 }
@@ -533,49 +521,8 @@
         height: auto; /* Mantener proporción */
         max-width: 100%; /* Asegura que la imagen no se desborde */
     }
-    .notification-image {
-        width: 80%;
-        height: auto;
-    
-    }
-}
 
-
-@media (min-width: 1300px) {
-    .notification-image {
-        width: 70%;
-        height: auto;
-    }
-    
 }
-@media (min-width: 1500px) {
-    .notification-image {
-        width: 60%;
-        height: auto;
-    }
-}
-@media (min-width: 1800px) {
-    .notification-image {
-        width: 50%;
-        height: auto;
-    }
-    
-}
-@media (min-width: 2000px) {
-    .notification-image {
-        width: 50%;
-        height: auto;
-    }
-    
-}
-@media (min-width: 2200px) {
-    .notification-image {
-        width: 46%;
-        height: auto;
-    }
-    
-}
-
 
 .footer-title {
     font-size: 1.1rem; /* Ajusta el tamaño del título */
@@ -588,5 +535,8 @@ footer p {
 footer .small-text {
     font-size: 0.8rem; /* Tamaño del texto para los derechos reservados */
 }
+
+
+
 
 
