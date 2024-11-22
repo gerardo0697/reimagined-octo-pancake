@@ -12,6 +12,8 @@
     color: #054c09;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     letter-spacing: 2px;
+    padding-top: 20px;
+    margin-bottom: none;
 }
 
 /* Botones flotantes de redes sociales */
@@ -40,17 +42,36 @@
 }
 
 /* Cambiar el color cuando se pasa el cursor por encima */
+/* Efecto hover general */
 .social-icons a:hover {
-    background-color: #555; /* Color al pasar el cursor */
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
 }
 
-/* Iconos de redes sociales específicos */
+/* Facebook */
 .facebook {
-    background-color: #3b5998; /* Facebook */
+    background-color: #3b5998; /* Color inicial de Facebook */
 }
 
+.facebook:hover {
+    background-color: #2d4373; /* Color de hover para Facebook */
+}
+
+/* Instagram */
 .instagram {
-    background-color: #e4405f; /* Instagram */
+    background-color: #e4405f; /* Color inicial de Instagram */
+}
+
+.instagram:hover {
+    background-color: #bc2a8d; /* Color de hover para Instagram */
+}
+
+/* WhatsApp */
+.whatsapp {
+    background-color: #25d366; /* Color inicial de WhatsApp */
+}
+
+.whatsapp:hover {
+    background-color: #1ebe57; /* Color de hover para WhatsApp */
 }
 
 /* Estilos de las cards (tarjetas) */
@@ -59,7 +80,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
 }
 
 /* Tarjeta individual */
@@ -71,7 +92,7 @@
     width: auto; /* Ancho automático para adaptarse */
     height: 800px; /* Altura automática */
     text-align: center;
-    padding: 15px;
+    padding: 0px;
     display: flex;
     flex-direction: column; /* Flex para alinear contenido en columna */
     justify-content: space-between; /* Botón en la parte inferior */
@@ -181,6 +202,33 @@
 /* Color del texto de los títulos en las cards */
 h3 {
     color: white;
+}
+.map-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-info {
+    background-color: #00aaff; /* Color característico de Waze */
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 /* Estilos responsivos */

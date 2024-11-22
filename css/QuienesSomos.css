@@ -2,21 +2,55 @@
 .row.mb-4 > .col-12 > .p-4,
 .row.mb-4.d-flex.align-items-stretch > .col-md-6 > .p-4,
 .row.mb-4 > .col-12 > .p-4 {
-    background-color: #0B2538; 
-    padding: 2rem; 
-    border-radius: 0.5rem; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Garantiza que sea afectado por el transform */
 }
 
-.valores-background-color{
-        background-color: #0B2538;
-
+/* Efecto hover */
+.row.mb-4 > .col-12 > .p-4:hover,
+.row.mb-4.d-flex.align-items-stretch > .col-md-6 > .p-4:hover,
+.row.mb-4 > .col-12 > .p-4:hover {
+    transform: scale(1.1) !important; /* Aumenta el tamaño en un 10% */
+    background-color: #f0f0f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
+
+.valores-background-color {
+    background-color: white;
+}
+
+/* Cards: fondo blanco y efecto hover */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.15s ease; /* Menor tiempo para box-shadow */
+    background-color: #ffffff; /* Fondo blanco por defecto */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.15s ease;
 }
 
+.card:hover {
+    background-color: #f0f0f0; /* Fondo gris clarito al pasar el cursor */
+    transform: scale(1.05) !important; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; 
+}
+/* Cambiar el color del texto a negro */
+.text-black {
+    color: black !important; /* Sobrescribe cualquier estilo previo */
+}
+
+/* Cambiar el color de los iconos a negro */
+.icon-black {
+    color: black !important; /* Aplica el color negro a los iconos */
+}
+
+/* Fondo del main container */
+main  {
+    background-color: #f0f0f0; /* Fondo gris oscuro */
+    color: white; /* Asegura que el texto sea visible */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+}
 
 /* Estilos generales del logo */
 .navbar-brand img {
@@ -31,9 +65,9 @@
     margin-bottom: 2rem;
     color: #054c09;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
+    letter-spacing: 2px; 
+    padding-top: 20px;
 }
-
 
 /* Botones flotantes de redes sociales */
 .social-icons {
@@ -61,17 +95,36 @@
 }
 
 /* Cambiar el color cuando se pasa el cursor por encima */
+/* Efecto hover general */
 .social-icons a:hover {
-    background-color: #555; /* Color al pasar el cursor */
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
 }
 
-/* Iconos de redes sociales específicos */
+/* Facebook */
 .facebook {
-    background-color: #3b5998; 
+    background-color: #3b5998; /* Color inicial de Facebook */
 }
 
+.facebook:hover {
+    background-color: #2d4373; /* Color de hover para Facebook */
+}
+
+/* Instagram */
 .instagram {
-    background-color: #e4405f; 
+    background-color: #e4405f; /* Color inicial de Instagram */
+}
+
+.instagram:hover {
+    background-color: #bc2a8d; /* Color de hover para Instagram */
+}
+
+/* WhatsApp */
+.whatsapp {
+    background-color: #25d366; /* Color inicial de WhatsApp */
+}
+
+.whatsapp:hover {
+    background-color: #1ebe57; /* Color de hover para WhatsApp */
 }
 
 /* Animación de entrada */
@@ -101,7 +154,6 @@
     to {
         opacity: 1; 
         transform: translateX(0); 
-        
     }
 }
 
@@ -121,14 +173,7 @@
     }
 }
 
-/* Tarjetas con efecto hover */
-.card:hover {
-    transform: scale(1.05) !important; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; 
-}
-
-
-
+/* Estilo para texto blanco */
 .text-white {
     color: white; /* Cambia el color del texto a blanco */
 }
@@ -136,8 +181,6 @@
 .list-unstyled {
     color: white; /* Asegura que el texto sea blanco */
 }
-
-
 
 /* Estilos responsivos */
 
@@ -239,17 +282,9 @@
     }
 }
 
-/* Pantallas grandes (desktops grandes) */
-@media (min-width: 993px) and (max-width: 1200px) {
-    .navbar-brand img {
-        max-width: 150px; /* Tamaño estándar en desktops grandes */
-    }
-}
-
 /* Pantallas muy grandes (desktops amplios) */
 @media (min-width: 1201px) {
     .navbar-brand img {
         max-width: 180px; /* Tamaño más grande en pantallas muy grandes */
     }
 }
-
