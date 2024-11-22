@@ -39,7 +39,7 @@ function toggleContent(card) {
         // Ajustar el ancho de la tarjeta
         const mainContainer = document.querySelector('main.container');
         const containerWidth = mainContainer.clientWidth;
-        const desiredCardWidth = containerWidth * 0.8;
+        const desiredCardWidth = containerWidth * 0.95;
         card.style.width = desiredCardWidth + 'px';
         card.style.maxWidth = '100%';
         card.style.marginLeft = 'auto';
