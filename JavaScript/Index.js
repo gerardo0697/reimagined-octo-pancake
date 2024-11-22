@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         counter.classList.add('visible'); // Agrega esta línea
         const target = +counter.getAttribute('data-target').replace(/,/g, ''); // Eliminar comas
         let count = 0;
-        const speed = 4000; // Tiempo para alcanzar el objetivo en ms
+        const speed = 3000; // Tiempo para alcanzar el objetivo en ms
         const increment = target / (speed / 100); // Incremento por cada intervalo
 
         const updateCount = setInterval(() => {
